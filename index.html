@@ -56,11 +56,13 @@
         
         <section class="hero">
 
-            <img class="desktop" src="images/Hero_Desktop.webp">
-            <img class="mobile" src="images/Hero_Mobile.webp">
-            <img class="tablet" src="images/Hero_Tablet.webp">
+            <picture>
+                <source media="(max-width:576px)" srcset="images/Hero_Mobile.webp" >
+                <source media="(max-width:960px)" srcset="images/Hero_Tablet.webp" >
+                <img src="images/Hero_Desktop.webp" alt="hero" >
+            </picture>
 
-           
+
             <div class="hero-content">
                 <div class="container">
                     <h1>Discover our line of VR Headsets</h1>
