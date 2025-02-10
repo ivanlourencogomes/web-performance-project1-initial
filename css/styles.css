@@ -720,4 +720,11 @@ footer .copyright-text {
 /* End of Design for Mobile Phones */
 
 
+.price {
+    animation: price-bad 1s infinite alternate;
+}
 
+@keyframes price-bad {
+    0% { font-size: 23px;}
+    100% { font-size: 24px;}
+}
