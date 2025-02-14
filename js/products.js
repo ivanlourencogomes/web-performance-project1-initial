@@ -64,12 +64,19 @@ function displayProducts(products) {
 
 }
 
+window.onload = () => {
+    let status = 'idle';
+    let productSection = document.querySelector('#all-products');
 
-
-loadProducts();
-
-// Simulate heavy operation. It could be a complex price calculation.
-for (let i = 0; i < 10000000; i++) {
-    const temp = Math.sqrt(i) * Math.sqrt(i);
+    window.onscroll = () => {
+        let position = productSection.getBoundingClientRect().top - (window.scrollY + window.innerHeight)
+        if (status == 'idle' &&  position <= 0) {
+            status = 'fetching';
+            loadProducts();
+            for (let i = 0; i < 10000000; i++) {
+                const temp = Math.sqrt(i) * Math.sqrt(i);
+            }
+        }
+    }
 }
 
